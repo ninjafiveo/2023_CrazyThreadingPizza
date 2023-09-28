@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,6 +29,11 @@ namespace CrazyThreadingPizza
         private void Start_BTN_Click(object sender, RoutedEventArgs e)
         {
             CrazyPC.CrazyFunctionCall();
+        }
+
+        private void Stop_BTN_Click(object sender, RoutedEventArgs e)
+        {
+            CrazyPC.FreddieKreuger();
         }
     }
 }
