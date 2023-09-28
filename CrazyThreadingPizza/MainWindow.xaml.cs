@@ -27,7 +27,7 @@ namespace CrazyThreadingPizza
 
         private void Start_BTN_Click(object sender, RoutedEventArgs e)
         {
-
+            CrazyPC.CrazyFunctionCall();
         }
     }
 }

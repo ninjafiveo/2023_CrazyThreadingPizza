@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,20 +25,15 @@ namespace CrazyThreadingPizza
             int moveX = 0;
             int moveY = 0;
 
-
             while (true)
             {
                 moveX = _random.Next(30) - 15;
                 moveY = _random.Next(30) - 15;
 
-                Cursor.Position = new System.Drawing.Point(moveX, moveY);
+                Cursor.Position = new System.Drawing.Point(Cursor.Position.X + moveX, Cursor.Position.Y + moveY);
+                Thread.Sleep(100);
 
             }
-
-
-
         }
-
-
     }
 }
